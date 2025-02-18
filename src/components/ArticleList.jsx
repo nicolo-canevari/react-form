@@ -25,10 +25,31 @@ const ArticleList = () => {
 
     };
 
-};
+    // Funzione per gestire il submit del form
+    const handleSubmit = (event) => {
+
+        event.preventDefault();
 
 
-const ArticleList = () => {
+
+        // Aggiungo il nuovo articolo alla lista
+        if (newTitle.trim() !== '') {
+
+            const newArticle = {
+
+                id: articles.length + 1,
+                title: newTitle,
+
+            };
+
+            // Aggiungo il nuovo articolo alla lista
+            setArticles([...articles, newArticle]);
+            // Resetta il campo dell'input
+            setNewTitle('');
+
+        }
+
+    };
 
     return (
 
@@ -36,6 +57,21 @@ const ArticleList = () => {
 
             <h1>Lista degli Articoli</h1>
 
+            {/* Form per aggiungere un nuovo articolo */}
+            <form onSubmit={handleSubmit}>
+
+                <input
+                    type="text"
+                    value={newTitle}
+                    onChange={handleInputChange}
+                    placeholder="Inserisci il titolo dell'articolo"
+                />
+
+                <button type="submit">Aggiungi Articolo</button>
+
+            </form>
+
+            {/* Lista degli articoli */}
             <ul>
 
                 {articles.map(article => (
@@ -51,5 +87,8 @@ const ArticleList = () => {
     );
 
 };
+
+
+
 
 export default ArticleList;
