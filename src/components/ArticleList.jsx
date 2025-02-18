@@ -25,6 +25,14 @@ const ArticleList = () => {
 
     };
 
+    // Funzione per rimuovere un articolo
+    const handleDelete = (id) => {
+
+        // Filtro via l'articolo con l'ID specifico
+        setArticles(articles.filter(article => article.id !== id));
+
+    };
+
     // Funzione per gestire il submit del form
     const handleSubmit = (event) => {
 
@@ -76,7 +84,16 @@ const ArticleList = () => {
 
                 {articles.map(article => (
 
-                    <li key={article.id}>{article.title}</li>
+                    <li key={article.id}>{article.title}
+
+                        {/* Bottone di cancellazione */}
+                        <button onClick={() => handleDelete(article.id)}>
+
+                            Delete
+
+                        </button>
+
+                    </li>
 
                 ))}
 
