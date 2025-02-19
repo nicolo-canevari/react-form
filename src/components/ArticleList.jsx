@@ -38,10 +38,8 @@ const ArticleList = () => {
 
         event.preventDefault();
 
-
-
         // Aggiungo il nuovo articolo alla lista
-        if (newTitle.trim() !== '') {
+        if (newTitle() !== '') {
 
             const newArticle = {
 

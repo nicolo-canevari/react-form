@@ -1,3 +1,109 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Stile per il corpo della pagina */
+body {
+
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+
+}
+
+/* Titolo principale */
+h1 {
+
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+
+}
+
+/* Form di aggiunta nuovo articolo */
+form {
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+}
+
+input {
+
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+}
+
+button[type="submit"] {
+
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+}
+
+button[type="submit"]:hover {
+
+  background-color: #2980b9;
+
+}
+
+/* Lista degli articoli */
+ul {
+
+  list-style: none;
+  padding: 0;
+
+}
+
+/* Ogni articolo nella lista */
+li {
+
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+button {
+
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+
+  background-color: #c0392b;
+
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
